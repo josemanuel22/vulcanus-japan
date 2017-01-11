@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apuestas>
+	<apuesta tipo="noEmpatable">
+		<id>1</id>
+		<categoria>Tenis</categoria>
+		<fecha>11/10/2016</fecha>
+		<rival1>Rafa Nadal</rival1>
+		<rival2>Federrer</rival2>
+		<ratio>
+			<victoria1>1.2</victoria1>
+			<victoria2>2.2</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>2</id>
+		<categoria>Tenis</categoria>
+		<fecha>15/10/2016</fecha>
+		<rival1>Rafa Nadal</rival1>
+		<rival2>Djokovic</rival2>
+		<ratio>
+			<victoria1>1.5</victoria1>
+			<victoria2>1.7</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>3</id>
+		<categoria>Tenis</categoria>
+		<fecha>14/10/2016</fecha>
+		<rival1>Tommi Robledo</rival1>
+		<rival2>Wabrinca</rival2>
+		<ratio>
+			<victoria1>2.5</victoria1>
+			<victoria2>1.2</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>4</id>
+		<categoria>Baloncesto</categoria>
+		<fecha>14/10/2016</fecha>
+		<rival1>Los Angeles Lakers</rival1>
+		<rival2>Boston Celtics</rival2>
+		<ratio>
+			<victoria1>1.7</victoria1>
+			<victoria2>1.2</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>5</id>
+		<categoria>Baloncesto</categoria>
+		<fecha>14/10/2016</fecha>
+		<rival1>Golden State Warriors</rival1>
+		<rival2>San Antonio Spurs</rival2>
+		<ratio>
+			<victoria1>1.5</victoria1>
+			<victoria2>1.1</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>6</id>
+		<categoria>Baloncesto</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Chicago Bulls</rival1>
+		<rival2>Denver Nuggets</rival2>
+		<ratio>
+			<victoria1>1.5</victoria1>
+			<victoria2>1.1</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>7</id>
+		<categoria>Baloncesto</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Miami Heat</rival1>
+		<rival2>Toronto Raptors</rival2>
+		<ratio>
+			<victoria1>1.4</victoria1>
+			<victoria2>1.7</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="empatable">
+		<id>8</id>
+		<categoria>Football</categoria>
+		<fecha>21/10/2016</fecha>
+		<rival1>At de Madrid</rival1>
+		<rival2>Real Madrid</rival2>
+		<ratio>
+			<victoria1>1.2</victoria1>
+			<empate>1.2</empate>
+			<victoria2>5.5</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="empatable">
+		<id>9</id>
+		<categoria>Football</categoria>
+		<fecha>21/10/2016</fecha>
+		<rival1>Betis</rival1>
+		<rival2>Sevilla</rival2>
+		<ratio>
+			<victoria1>1.7</victoria1>
+			<empate>1.2</empate>
+			<victoria2>1.3</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="empatable">
+		<id>10</id>
+		<categoria>Football</categoria>
+		<fecha>22/10/2016</fecha>
+		<rival1>Rayo Vallecano</rival1>
+		<rival2>Getafe</rival2>
+		<ratio>
+			<victoria1>1.2</victoria1>
+			<empate>2.6</empate>
+			<victoria2>2.5</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="empatable">
+		<id>11</id>
+		<categoria>Football</categoria>
+		<fecha>21/10/2016</fecha>
+		<rival1>Cultural Leonesa</rival1>
+		<rival2>Ponferradina</rival2>
+		<ratio>
+			<victoria1>1.2</victoria1>
+			<empate>1.2</empate>
+			<victoria2>5.5</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>12</id>
+		<categoria>Tenis</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Andy Murray</rival1>
+		<rival2>Juan Martín del Potro</rival2>
+		<ratio>
+			<victoria1>1.2</victoria1>
+			<victoria2>2.1</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>13</id>
+		<categoria>Beisbol</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Boston Red Sox</rival1>
+		<rival2>New York Yankees</rival2>
+		<ratio>
+			<victoria1>2.7</victoria1>
+			<victoria2>1.2</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="noEmpatable">
+		<id>14</id>
+		<categoria>Beisbol</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Chicago White Sox</rival1>
+		<rival2>Atlanta Braves</rival2>
+		<ratio>
+			<victoria1>2.7</victoria1>
+			<victoria2>1.4</victoria2>
+		</ratio>
+	</apuesta>
+
+
+	<apuesta tipo="noEmpatable">
+		<id>15</id>
+		<categoria>Beisbol</categoria>
+		<fecha>16/10/2016</fecha>
+		<rival1>Arizona Diamondsback</rival1>
+		<rival2>Leones del Caracas</rival2>
+		<ratio>
+			<victoria1>1.3</victoria1>
+			<victoria2>2.8</victoria2>
+		</ratio>
+	</apuesta>
+
+	<apuesta tipo="empatable">
+		<id>16</id>
+		<categoria>Football</categoria>
+		<fecha>21/10/2016</fecha>
+		<rival1>Atletico de Bilbao</rival1>
+		<rival2>Almeria FC</rival2>
+		<ratio>
+			<victoria1>1.4</victoria1>
+			<empate>3.3</empate>
+			<victoria2>4.5</victoria2>
+		</ratio>
+	</apuesta>
+
+</apuestas>

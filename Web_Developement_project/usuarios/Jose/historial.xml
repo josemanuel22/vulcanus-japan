@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historial>
+  <apuesta>
+    <id>1</id>
+    <ratio>1.2</ratio>
+    <cantidad>70</cantidad>
+  </apuesta>
+  <apuesta>
+    <id>13</id>
+    <ratio>2.7</ratio>
+    <cantidad>70</cantidad>
+  </apuesta>
+<apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>-1</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>10</cantidad></apuesta><apuesta><id>5</id><ratio>1.1</ratio><cantidad>10</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>10</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>100</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>10</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>12.5</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>2.2</ratio><cantidad>100</cantidad></apuesta><apuesta><id>13</id><ratio>2.7</ratio><cantidad>10</cantidad></apuesta><apuesta><id>4</id><ratio>1.2</ratio><cantidad>10</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>12</cantidad></apuesta><apuesta><id>4</id><ratio>1.7</ratio><cantidad>12</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>100</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>33</cantidad></apuesta><apuesta><id>4</id><ratio>1.7</ratio><cantidad>34</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad>-2</cantidad></apuesta><apuesta><id>4</id><ratio>1.7</ratio><cantidad/></apuesta><apuesta><id>8</id><ratio>1.2</ratio><cantidad>15</cantidad></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta><apuesta><id>1</id><ratio>1.2</ratio><cantidad/></apuesta></historial>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="si1" type="PostgreSQL - 9.5.5">
+   <tables>
+      <table name="bets" numRows="7488" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="betid" nullable="false" remarks="" size="10" type="int4">
+            <child column="betid" foreignKey="clientbets_betid_fkey" implied="false" onDeleteCascade="false" table="clientbets"/>
+            <child column="betid" foreignKey="optionbet_betid_fkey" implied="false" onDeleteCascade="false" table="optionbet"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="betcloses" nullable="true" remarks="" size="13" type="date"/>
+         <column autoUpdated="false" digits="0" id="2" name="category" nullable="true" remarks="" size="10" type="int4">
+            <parent column="categoryid" foreignKey="pk_category" implied="false" onDeleteCascade="false" table="category"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="3" name="betdesc" nullable="true" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="winneropt" nullable="true" remarks="" size="10" type="int4">
+            <parent column="optionid" foreignKey="pk_winneropt" implied="false" onDeleteCascade="false" table="options"/>
+         </column>
+         <primaryKey column="betid" sequenceNumberInPK="1"/>
+         <index name="bets_pkey" unique="true">
+            <column ascending="true" name="betid"/>
+         </index>
+      </table>
+      <table name="category" numRows="6" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('category_categoryid_seq'::regclass)" digits="0" id="0" name="categoryid" nullable="false" remarks="" size="10" type="serial">
+            <child column="category" foreignKey="pk_category" implied="false" onDeleteCascade="false" table="bets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="categoryname" nullable="false" remarks="" size="30" type="varchar"/>
+         <primaryKey column="categoryid" sequenceNumberInPK="1"/>
+         <index name="category_pkey" unique="true">
+            <column ascending="true" name="categoryid"/>
+         </index>
+      </table>
+      <table name="clientbets" numRows="669638" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="customerid" nullable="false" remarks="" size="10" type="int4">
+            <parent column="customerid" foreignKey="clientbets_customerid_fkey" implied="false" onDeleteCascade="false" table="customers"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="optionid" nullable="false" remarks="" size="10" type="int4">
+            <parent column="optionid" foreignKey="clientbets_optionid_fkey" implied="false" onDeleteCascade="false" table="options"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="bet" nullable="false" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="3" name="ratio" nullable="false" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="4" name="outcome" nullable="true" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="5" name="betid" nullable="true" remarks="" size="10" type="int4">
+            <parent column="betid" foreignKey="clientbets_betid_fkey" implied="false" onDeleteCascade="false" table="bets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="6" name="orderid" nullable="true" remarks="" size="10" type="int4">
+            <parent column="orderid" foreignKey="pk_clientorder" implied="false" onDeleteCascade="false" table="clientorders"/>
+         </column>
+         <column autoUpdated="true" defaultValue="nextval('clientbets_clientbetid_seq'::regclass)" digits="0" id="7" name="clientbetid" nullable="false" remarks="" size="10" type="serial"/>
+         <column autoUpdated="false" defaultValue="false" digits="0" id="8" name="confirmed" nullable="true" remarks="" size="1" type="bool"/>
+         <primaryKey column="clientbetid" sequenceNumberInPK="1"/>
+         <index name="clientbets_pkey" unique="true">
+            <column ascending="true" name="clientbetid"/>
+         </index>
+      </table>
+      <table name="clientorders" numRows="149030" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="customerid" nullable="true" remarks="" size="10" type="int4">
+            <parent column="customerid" foreignKey="pk_customer" implied="false" onDeleteCascade="false" table="customers"/>
+         </column>
+         <column autoUpdated="false" digits="6" id="1" name="date" nullable="true" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="true" defaultValue="nextval('clientorders_id_seq'::regclass)" digits="0" id="2" name="orderid" nullable="false" remarks="" size="10" type="serial">
+            <child column="orderid" foreignKey="pk_clientorder" implied="false" onDeleteCascade="false" table="clientbets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="3" name="totalamount" nullable="true" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="4" name="totaloutcome" nullable="true" remarks="" size="131089" type="numeric"/>
+         <primaryKey column="orderid" sequenceNumberInPK="1"/>
+         <index name="clientorders_pkey" unique="true">
+            <column ascending="true" name="orderid"/>
+         </index>
+      </table>
+      <table name="customers" numRows="14093" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('customers_customerid_seq'::regclass)" digits="0" id="0" name="customerid" nullable="false" remarks="" size="10" type="serial">
+            <child column="customerid" foreignKey="clientbets_customerid_fkey" implied="false" onDeleteCascade="false" table="clientbets"/>
+            <child column="customerid" foreignKey="pk_customer" implied="false" onDeleteCascade="false" table="clientorders"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="firstname" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="lastname" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="address1" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="city" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="zip" nullable="false" remarks="" size="9" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="country" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="7" name="email" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="8" name="creditcard" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="9" name="username" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="10" name="password" nullable="false" remarks="" size="50" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="11" name="credit" nullable="true" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="12" name="gender" nullable="true" remarks="" size="1" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="13" name="lastname2" nullable="true" remarks="" size="50" type="varchar"/>
+         <primaryKey column="customerid" sequenceNumberInPK="1"/>
+         <index name="customers_pkey" unique="true">
+            <column ascending="true" name="customerid"/>
+         </index>
+         <index name="email" unique="true">
+            <column ascending="true" name="email"/>
+         </index>
+      </table>
+      <table name="optionbet" numRows="16068" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="optionid" nullable="false" remarks="" size="10" type="int4">
+            <parent column="optionid" foreignKey="optionbet_optionid_fkey" implied="false" onDeleteCascade="false" table="options"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="betid" nullable="false" remarks="" size="10" type="int4">
+            <parent column="betid" foreignKey="optionbet_betid_fkey" implied="false" onDeleteCascade="false" table="bets"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="ratio" nullable="false" remarks="" size="131089" type="numeric"/>
+         <column autoUpdated="true" defaultValue="nextval('optionbet_optionbetid_seq'::regclass)" digits="0" id="3" name="optionbetid" nullable="false" remarks="" size="10" type="serial"/>
+         <primaryKey column="optionbetid" sequenceNumberInPK="1"/>
+         <index name="optionbet_pkey" unique="true">
+            <column ascending="true" name="optionbetid"/>
+         </index>
+      </table>
+      <table name="options" numRows="122" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('options_optionid_seq'::regclass)" digits="0" id="0" name="optionid" nullable="false" remarks="" size="10" type="serial">
+            <child column="winneropt" foreignKey="pk_winneropt" implied="false" onDeleteCascade="false" table="bets"/>
+            <child column="optionid" foreignKey="clientbets_optionid_fkey" implied="false" onDeleteCascade="false" table="clientbets"/>
+            <child column="optionid" foreignKey="optionbet_optionid_fkey" implied="false" onDeleteCascade="false" table="optionbet"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="optiondesc" nullable="false" remarks="" size="30" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="cuota" nullable="true" remarks="" size="10" type="int4"/>
+         <primaryKey column="optionid" sequenceNumberInPK="1"/>
+         <index name="options_pkey" unique="true">
+            <column ascending="true" name="optionid"/>
+         </index>
+      </table>
+   </tables>
+</database>
