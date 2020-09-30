@@ -2,11 +2,11 @@
 Repository where I up load some of my old projects. Take a look.
 
 ## AI project
-classic AI algorithms implement in `lisp
+classic AI algorithms implement in `Lisp`
 
 ## Programming language project
 
-Own compiler for a type `c` programming language for the 80X86 processor. Flex & Bison
+Own compiler for a type `C` programming language for the 80X86 processor. `Flex` & `Bison`
 
 ## k-shortest paths
 
